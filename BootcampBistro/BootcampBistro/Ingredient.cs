@@ -8,5 +8,7 @@ namespace BootcampBistro
 {
     class Ingredient
     {
+        string test = "actuallyArbys";
     }
+
 }
