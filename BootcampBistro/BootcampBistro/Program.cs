@@ -7,32 +7,6 @@ namespace BootcampBistro
         static void Main(string[] args)
         {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             Console.WriteLine("== Welcome to the Bootcamp Bistro! ==");
             Console.WriteLine("  {0,-20} {1,10}", "Item", "Price");
             Console.WriteLine("=====================================");
