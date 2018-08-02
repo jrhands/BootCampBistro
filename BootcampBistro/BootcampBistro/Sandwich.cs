@@ -4,9 +4,9 @@ namespace BootcampBistro
 {
     public class Sandwich : MenuItem
     {
-        public List<Ingredient> Ingredients;
+        public List<string> Ingredients;
 
-        public Sandwich(string name, List<Ingredient> ingredients, double price) : base(name, price)
+        public Sandwich(string name, List<string> ingredients, double price) : base(name, price)
         {
             Ingredients = ingredients;
         }
