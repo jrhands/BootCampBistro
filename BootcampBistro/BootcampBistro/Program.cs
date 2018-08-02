@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BootcampBistro
 {
@@ -52,11 +47,11 @@ namespace BootcampBistro
             Console.WriteLine("  {0,-20} {1,10}", "Hot Dog", "$7.99");
             Console.WriteLine("  {0,-20} {1,10}", "Potatoe Chips", "$2.99");
             Console.WriteLine("  {0,-20} {1,10}", "BBQ Chips", "$2.99");
-            Console.WriteLine("=====================================");
+            Console.WriteLine("=====================hehe=============");
 
 
         }
-       
+
 
     }
 }
