@@ -47,7 +47,7 @@ namespace BootcampBistro
             Console.WriteLine("  {0,-20} {1,10}", "Hot Dog", "$7.99");
             Console.WriteLine("  {0,-20} {1,10}", "Potatoe Chips", "$2.99");
             Console.WriteLine("  {0,-20} {1,10}", "BBQ Chips", "$2.99");
-            Console.WriteLine("=====================hehe=============");
+            Console.WriteLine("======================================");
 
 
         }
