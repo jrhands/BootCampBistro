@@ -2,17 +2,13 @@
 
 namespace BootcampBistro
 {
-    public class Sandwich
+    public class Sandwich : MenuItem
     {
-        public string Name;
         public List<Ingredient> Ingredients;
-        public double Price;
 
-        public Sandwich(string name, List<Ingredient> ingredients, double price)
+        public Sandwich(string name, List<Ingredient> ingredients, double price) : base(name, price)
         {
-            Name = name;
             Ingredients = ingredients;
-            Price = price;
         }
     }
 }

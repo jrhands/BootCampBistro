@@ -1,12 +1,51 @@
+<<<<<<< HEAD
 ﻿namespace BootcampBistro
+=======
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+namespace BootcampBistro
+>>>>>>> 3e69be607525074e51683d59e55365bf48482b60
 {
-    class Ingredient
+    public class Ingredient
     {
 <<<<<<< HEAD
-        string test = "applebees";
+        public Ingredient()
+        {
+            //Placeholder
+        }
 =======
-        string test = "actuallyArbys";
->>>>>>> 233c9559e9a5aeba6f2cd71cc2b1f432ddb0281e
+        string test = "applebees";
+
+        private static string ingredients = @"C:\Users\scull\Desktop\BootCampBistro\BootcampBistro\BootcampBistro\DataFiles\Ingredients.txt";
+       private static string ingredientText = File.ReadAllText(ingredients);
+        private static string[] ingredientsKeyValue = ingredientText.Split('\r');
+        private static Hashtable hashIngreds = new Hashtable();
+
+
+            public static Hashtable TableIngredients()
+            { 
+
+            foreach (var ingredient1 in ingredientsKeyValue)
+             {
+
+            string[] ingredientString = ingredient1.Split(',');
+            hashIngreds.Add(ingredientString[0], double.Parse(ingredientString[1]));
+
+
+             }
+
+                return hashIngreds;
+
+
+
+            }
+
+>>>>>>> 3e69be607525074e51683d59e55365bf48482b60
     }
 
 }

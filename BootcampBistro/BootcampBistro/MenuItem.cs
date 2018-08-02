@@ -1,11 +1,11 @@
 ﻿namespace BootcampBistro
 {
-    public class Drink
+    public class MenuItem
     {
         public string Name;
         public double Price;
 
-        public Drink(string name, double price)
+        public MenuItem(string name, double price)
         {
             Name = name;
             Price = price;
