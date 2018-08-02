@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BootcampBistro
 {
@@ -42,36 +38,36 @@ namespace BootcampBistro
                     case 1:
                         orderList.Add(Sandwich.GetRB());
                         break;
-                    /*case 2:
-                        orderList.Add(Sandwich.GetTK());
-                        break;
-                    case 3:
-                        orderList.Add(Sandwich.GetHM());
-                        break;
-                    case 4:
-                        orderList.Add(Sandwich.GetCL());
-                        break;
-                    case 5:
-                        orderList.Add(Sandwich.GetTN());
-                        break;
-                    case 6:
-                        orderList.Add(Sandwich.GetVG());
-                        break;
-                    case 7:
-                        orderList.Add(Sandwich.GetIT());
-                        break;
-                    case 8:
-                        orderList.Add(Sandwich.GetBRG());
-                        break;
-                    case 9:
-                        orderList.Add(Sandwich.GetHD());
-                        break;
-                    case 10:
-                        orderList.Add(Ingredient.GetCP());
-                        break;
-                    case 11:
-                        orderList.Add(Ingredient.GetBBQC());
-                        break;*/
+                    //case 2:
+                    //    orderList.Add(Sandwich.GetTK());
+                    //    break;
+                    //case 3:
+                    //    orderList.Add(Sandwich.GetHM());
+                    //    break;
+                    //case 4:
+                    //    orderList.Add(Sandwich.GetCL());
+                    //    break;
+                    //case 5:
+                    //    orderList.Add(Sandwich.GetTN());
+                    //    break;
+                    //case 6:
+                    //    orderList.Add(Sandwich.GetVG());
+                    //    break;
+                    //case 7:
+                    //    orderList.Add(Sandwich.GetIT());
+                    //    break;
+                    //case 8:
+                    //    orderList.Add(Sandwich.GetBRG());
+                    //    break;
+                    //case 9:
+                    //    orderList.Add(Sandwich.GetHD());
+                    //    break;
+                    //case 10:
+                    //    orderList.Add(Ingredient.GetCP());
+                    //    break;
+                    //case 11:
+                    //    orderList.Add(Ingredient.GetBBQC());
+                    //    break;
                 }
                 Console.WriteLine("Do you want to add another item? (y/n)");
                 string answer = Console.ReadLine().ToLower();
@@ -96,7 +92,7 @@ namespace BootcampBistro
             }
             Console.WriteLine($"Your total price is {sum}.");
         }
-       
+
 
     }
 }
