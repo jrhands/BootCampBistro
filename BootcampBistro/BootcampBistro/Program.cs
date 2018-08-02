@@ -25,7 +25,7 @@ namespace BootcampBistro
             Console.WriteLine(" {0,-3} {1,-20} {2,10}", "11:", "BBQ Chips", "$2.99");
             Console.WriteLine("=====================================");
 
-            List<double> orderList = new List<double> ();
+            List<double> orderList = new List<double>();
 
             bool repeat = true;
             do
@@ -35,9 +35,9 @@ namespace BootcampBistro
 
                 switch (order)
                 {
-                    case 1:
-                        orderList.Add(Sandwich.GetRB());
-                        break;
+                    //case 1:
+                    //    orderList.Add(Sandwich.GetRB());
+                    //    break;
                     //case 2:
                     //    orderList.Add(Sandwich.GetTK());
                     //    break;

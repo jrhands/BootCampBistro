@@ -1,10 +1,18 @@
-﻿namespace BootcampBistro
+﻿using System.Collections.Generic;
+
+namespace BootcampBistro
 {
-    class Sandwich
+    public class Sandwich
     {
-        public static double GetRB()
+        public string Name;
+        public List<Ingredient> Ingredients;
+        public double Price;
+
+        public Sandwich(string name, List<Ingredient> ingredients, double price)
         {
-            return 12.99;
+            Name = name;
+            Ingredients = ingredients;
+            Price = price;
         }
     }
 }
