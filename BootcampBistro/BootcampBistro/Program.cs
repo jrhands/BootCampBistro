@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,33 @@ namespace BootcampBistro
     {
         static void Main(string[] args)
         {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.WriteLine("== Welcome to the Bootcamp Bistro! ==");
             Console.WriteLine("  {0,-20} {1,10}", "Item", "Price");
             Console.WriteLine("=====================================");
@@ -26,6 +54,9 @@ namespace BootcampBistro
             Console.WriteLine("  {0,-20} {1,10}", "BBQ Chips", "$2.99");
             Console.WriteLine("=====================================");
 
+
         }
+       
+
     }
 }
