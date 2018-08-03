@@ -8,6 +8,7 @@ namespace BootcampBistro
         static void Main(string[] args)
         {
             bool orderAgain = true;
+            List<MenuItem> menu = LoadData();
             do
             {
                 Console.WriteLine("=====================================");
@@ -110,6 +111,12 @@ namespace BootcampBistro
                 }
             } while (orderAgain == true);
 
+        }
+
+        public static List<MenuItem> LoadData()
+        {
+            //This will load Sandwiches.txt and Other.txt
+            return new List<MenuItem>();
         }
 
 
