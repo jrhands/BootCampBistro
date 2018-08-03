@@ -33,23 +33,29 @@ namespace BootcampBistro
                 bool repeat = true;
                 do
                 {
-                    Console.WriteLine("What item would you like to order? (#)");
-                    int order = int.Parse(Console.ReadLine());
-
-                    
-                    bool inStock = Sandwich.GetInv(order);
-                    if (inStock == true)
+                    bool itemOut = true;
+                    do
                     {
-                        orderList.Add(Sandwich.GetPrice(order));
-                        itemList.Add(Sandwich.GetName(order));
-                    }
-                    else if (inStock == false)
-                    {
-                        Console.WriteLine($"Sorry, we are currently out of {Sandwich.GetName(order)}.");
-                        break;
-                    }
+                        Console.WriteLine("What item would you like to order? (#)");
+                        int order = int.Parse(Console.ReadLine());
 
-                    
+
+                        bool inStock = Sandwich.GetInv(order);
+                        if (inStock == true)
+                        {
+                            orderList.Add(Sandwich.GetPrice(order));
+                            itemList.Add(Sandwich.GetName(order));
+                            Console.WriteLine($"{Sandwich.GetName(order)} is {Sandwich.GetPrice(order):C}.");
+                            itemOut = false;
+                        }
+                        else if (inStock == false)
+                        {
+                            Console.WriteLine($"Sorry, we are currently out of {Sandwich.GetName(order)}.");
+                            itemOut = true;
+                        }
+                    } while (itemOut == true);
+
+
                     Console.WriteLine("Do you want to add another item? (y/n)");
                     string answer = Console.ReadLine().ToLower();
                     switch (answer)
@@ -76,7 +82,7 @@ namespace BootcampBistro
                 {
                     sum += price;
                 }
-                Console.WriteLine($"Your total price is {sum} + {(sum * .06):C} tax.");
+                Console.WriteLine($"Subtotal: {sum:C}.\nTax {(sum * .06):C}\nYour total is {sum+(sum*0.06):C}.");
                 sum = 0;
                 orderList.Clear();
                 itemList.Clear();

@@ -28,6 +28,10 @@ namespace BootcampBistro
                 //    z[15][1]--;
                 //    return true;
                 //}
+                case 2:
+                    return true;
+                case 3:
+                    return true;
                 default:
                     return false;
                     
