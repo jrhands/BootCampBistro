@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BootcampBistro
 {
-    class Sandwich
+    public class Sandwich : MenuItem
     {
-        public static double GetRB()
+        public List<string> Ingredients;
+
+        public Sandwich(string name, List<string> ingredients, double price) : base(name, price)
         {
-            return 12.99;
+            Ingredients = ingredients;
         }
        
     }

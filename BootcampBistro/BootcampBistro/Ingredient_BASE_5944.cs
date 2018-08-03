@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BootcampBistro
 {
-    class Order
+    class Ingredient
     {
     }
 }
