@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace BootcampBistro
 {
@@ -116,9 +117,25 @@ namespace BootcampBistro
         public static List<MenuItem> LoadData()
         {
             //This will load Sandwiches.txt and Other.txt
+            StreamReader reader = new StreamReader("..\\..\\DataFiles\\Menu.txt");
+            List<MenuItem> menu = new List<MenuItem>();
+            string[] menuData;
+            string menuDataRaw;
+            while (true)
+            {
+                menuDataRaw = reader.ReadLine();
+                if(menuDataRaw == null)
+                {
+                    break;
+                }
+                menuData = menuDataRaw.Split(',');
+                menu.Add(new MenuItem(menuData[0], double.Parse(menuData[1])));
+            }
+            foreach(MenuItem menuItem in menu)
+            {
+                Console.WriteLine(menuItem.GetData());
+            }
             return new List<MenuItem>();
         }
-
-
     }
 }

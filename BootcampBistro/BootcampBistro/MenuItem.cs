@@ -10,5 +10,10 @@
             Name = name;
             Price = price;
         }
+
+        public string GetData()
+        {
+            return ($"{Name} {Price:C}");
+        }
     }
 }
