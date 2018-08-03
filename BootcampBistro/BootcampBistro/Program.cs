@@ -27,7 +27,7 @@ namespace BootcampBistro
                 Console.WriteLine(" {0,-3} {1,-20} {2,10}", "10:", "Potato Chips", "$2.99");
                 Console.WriteLine(" {0,-3} {1,-20} {2,10}", "11:", "BBQ Chips", "$2.99");
                 Console.WriteLine("=====================================");
-
+                List<string> itemList = new List<string>();
                 List<double> orderList = new List<double>();
 
                 bool repeat = true;
@@ -36,42 +36,20 @@ namespace BootcampBistro
                     Console.WriteLine("What item would you like to order? (#)");
                     int order = int.Parse(Console.ReadLine());
 
-                    switch (order)
+                    
+                    bool inStock = Sandwich.GetInv(order);
+                    if (inStock == true)
                     {
-                        //case 1:
-                        //    orderList.Add(Sandwich.GetRB());
-                        //    break;
-                        //case 2:
-                        //    orderList.Add(Sandwich.GetTK());
-                        //    break;
-                        //case 3:
-                        //    orderList.Add(Sandwich.GetHM());
-                        //    break;
-                        //case 4:
-                        //    orderList.Add(Sandwich.GetCL());
-                        //    break;
-                        //case 5:
-                        //    orderList.Add(Sandwich.GetTN());
-                        //    break;
-                        //case 6:
-                        //    orderList.Add(Sandwich.GetVG());
-                        //    break;
-                        //case 7:
-                        //    orderList.Add(Sandwich.GetIT());
-                        //    break;
-                        //case 8:
-                        //    orderList.Add(Sandwich.GetBRG());
-                        //    break;
-                        //case 9:
-                        //    orderList.Add(Sandwich.GetHD());
-                        //    break;
-                        //case 10:
-                        //    orderList.Add(Ingredient.GetCP());
-                        //    break;
-                        //case 11:
-                        //    orderList.Add(Ingredient.GetBBQC());
-                        //    break;
+                        orderList.Add(Sandwich.GetPrice(order));
+                        itemList.Add(Sandwich.GetName(order));
                     }
+                    else if (inStock == false)
+                    {
+                        Console.WriteLine($"Sorry, we are currently out of {Sandwich.GetName(order)}.");
+                        break;
+                    }
+
+                    
                     Console.WriteLine("Do you want to add another item? (y/n)");
                     string answer = Console.ReadLine().ToLower();
                     switch (answer)
@@ -88,14 +66,20 @@ namespace BootcampBistro
                 } while (repeat == true);
 
                 double sum = 0;
+                Console.WriteLine("You ordered:");
+                foreach (string item in itemList)
+                {
+                    Console.WriteLine(item);
+                }
 
                 foreach (double price in orderList)
                 {
                     sum += price;
                 }
-                Console.WriteLine($"Your total price is {sum + (sum * .06):C}.");
+                Console.WriteLine($"Your total price is {sum} + {(sum * .06):C} tax.");
                 sum = 0;
                 orderList.Clear();
+                itemList.Clear();
 
                 Console.WriteLine("Would you like to make another order? (y/n)");
                 string answer2 = Console.ReadLine().ToLower();
