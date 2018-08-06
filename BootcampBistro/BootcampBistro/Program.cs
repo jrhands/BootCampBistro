@@ -93,10 +93,36 @@ namespace BootcampBistro
 
                 foreach (double price in orderList)
                 {
-                    sum += price;
+                    sum += price*.06;
+                   
                 }
-                Console.WriteLine($"Your total price is {sum + (sum * .06):C}.");
+
+                Console.WriteLine($"Your total price is {sum:C}.");
                 sum = 0;
+
+                Console.WriteLine("How would you like to pay for that: Cash, Check, or Card?");
+                string pmtReply = Console.ReadLine().ToLower();
+
+               Payment card = new Payment((sum), "Visa");
+                card.cardPmt();
+                card.checkPmt();
+                
+                if (pmtReply == "Card")
+               /* {
+                    Payment card = new Payment((sum), "Visa");
+                    Console.ReadLine();
+                }*/
+                if (pmtReply == "Cash")
+                {
+                    Payment cash = new Payment((sum), "Cash");
+                    cash.CashPmt();
+                }
+               if(pmtReply == "Check")
+                {
+                    Payment check = new Payment((sum), "Check");
+                    check.checkPmt();
+                }
+
                 orderList.Clear();
 
                 Console.WriteLine("Would you like to make another order? (y/n)");
