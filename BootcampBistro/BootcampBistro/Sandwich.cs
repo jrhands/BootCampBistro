@@ -113,12 +113,6 @@ namespace BootcampBistro
                 default: return false;
 
             }
-
-
-
-
-
-
         }
 
         private static bool GetBbqChips(string path, Dictionary<string, int> hash)
@@ -148,7 +142,6 @@ namespace BootcampBistro
             if (hash["reg chips"] == 0)
             {
                 return false;
-
             }
             else
             {

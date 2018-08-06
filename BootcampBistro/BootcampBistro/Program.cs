@@ -36,15 +36,8 @@ namespace BootcampBistro
                 bool repeat = true;
                 do
                 {
-<<<<<<< HEAD
                     bool itemOut = true;
                     do
-=======
-                    Console.WriteLine("What item would you like to order? (#)");
-                     int order = int.Parse(Console.ReadLine());
-
-                    switch (order)
->>>>>>> e861d23dc5a230d3188d7a238bbe8a3640af4ef4
                     {
                         Console.WriteLine("What item would you like to order? (#)");
                         int order = int.Parse(Console.ReadLine());
@@ -64,7 +57,7 @@ namespace BootcampBistro
                             itemOut = true;
                         }
                     } while (itemOut == true);
-                   
+
 
                     Console.WriteLine("Do you want to add another item? (y/n)");
                     string answer = Console.ReadLine().ToLower();
@@ -85,30 +78,29 @@ namespace BootcampBistro
 
                 foreach (double price in orderList)
                 {
-                    sum += price*.06;
-                   
+                    sum += price;
                 }
 
-                Console.WriteLine($"Your total price is {sum:C}.");
+                Console.WriteLine($"Subtotal: {sum:C}\nTax: {sum * .06:C}\nTotal: {sum + (sum * .06):C}");
 
                 Console.WriteLine("How would you like to pay for that: Cash, Check, or Card?");
                 string pmtReply = Console.ReadLine().ToLower();
 
-               Payment card = new Payment((sum), "Visa");
+                Payment card = new Payment((sum), "Visa");
                 card.cardPmt();
                 card.checkPmt();
-                
+
                 if (pmtReply == "Card")
-               /* {
-                    Payment card = new Payment((sum), "Visa");
-                    Console.ReadLine();
-                }*/
-                if (pmtReply == "Cash")
-                {
-                    Payment cash = new Payment((sum), "Cash");
-                    cash.CashPmt();
-                }
-               if(pmtReply == "Check")
+                    /* {
+                         Payment card = new Payment((sum), "Visa");
+                         Console.ReadLine();
+                     }*/
+                    if (pmtReply == "Cash")
+                    {
+                        Payment cash = new Payment((sum), "Cash");
+                        cash.CashPmt();
+                    }
+                if (pmtReply == "Check")
                 {
                     Payment check = new Payment((sum), "Check");
                     check.checkPmt();
@@ -116,6 +108,7 @@ namespace BootcampBistro
 
                 orderList.Clear();
                 itemList.Clear();
+                sum = 0;
 
                 Console.WriteLine("Would you like to make another order? (y/n)");
                 string answer2 = Console.ReadLine().ToLower();
@@ -142,14 +135,14 @@ namespace BootcampBistro
             while (true)
             {
                 menuDataRaw = reader.ReadLine();
-                if(menuDataRaw == null)
+                if (menuDataRaw == null)
                 {
                     break;
                 }
                 menuData = menuDataRaw.Split(',');
                 menu.Add(new MenuItem(menuData[0], double.Parse(menuData[1])));
             }
-            foreach(MenuItem menuItem in menu)
+            foreach (MenuItem menuItem in menu)
             {
                 Console.WriteLine(menuItem.GetData());
             }
