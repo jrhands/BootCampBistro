@@ -36,8 +36,15 @@ namespace BootcampBistro
                 bool repeat = true;
                 do
                 {
+<<<<<<< HEAD
                     bool itemOut = true;
                     do
+=======
+                    Console.WriteLine("What item would you like to order? (#)");
+                     int order = int.Parse(Console.ReadLine());
+
+                    switch (order)
+>>>>>>> e861d23dc5a230d3188d7a238bbe8a3640af4ef4
                     {
                         Console.WriteLine("What item would you like to order? (#)");
                         int order = int.Parse(Console.ReadLine());

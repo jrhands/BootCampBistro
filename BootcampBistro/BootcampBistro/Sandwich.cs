@@ -32,7 +32,7 @@ namespace BootcampBistro
                 "Potatoe Chips",
                 "BBQ Chips"
             };
-            return nameList[order-1];
+            return nameList[order - 1];
         }
 
         public static double GetPrice(int order)
@@ -51,8 +51,10 @@ namespace BootcampBistro
                 2.99,
                 2.99
             };
-            return priceList[order-1];
+            return priceList[order - 1];
         }
+    
+        string path = @"C:\Users\Owner\Desktop\ingredients.txt";
 
 
 
