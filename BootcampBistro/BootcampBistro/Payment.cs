@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace BootcampBistro
 {
@@ -22,18 +23,17 @@ namespace BootcampBistro
         public void cardPmt()
 
         {
-            double[] cardNum = new double[15];
-            Console.WriteLine("Please enter your credit card number");
-            double entNum = double.Parse(Console.ReadLine());
+                double[] cardNum = new double[16];
+                Console.WriteLine("Please enter your credit card number");
+                double entNum = double.Parse(Console.ReadLine());
 
-            string entNum1 = entNum.ToString();
-            
-            if ()
-            {
-                Console.WriteLine("Please enter a 16 digit card number");
-                Console.ReadLine();
-            }
-                
+                string entNum1 = entNum.ToString();
+
+                if (entNum1.Length != 16)
+                {
+                    Console.WriteLine("Please enter a 16 digit card number");
+                }
+           
             Console.WriteLine("Please enter your expiration date mm/yy");
             string expDate = Console.ReadLine();
 
@@ -65,10 +65,11 @@ namespace BootcampBistro
             return cashAmt;
         }
 
-        public void checkPmt()
+        public string checkPmt()
         {
-            Console.WriteLine("Thank you for your payment by check");
-            Console.ReadLine();
+            Console.WriteLine("Please enter your check number:");
+            string checkNum = Console.ReadLine();
+            return checkNum;
         }
       
     }
