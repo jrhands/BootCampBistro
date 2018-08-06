@@ -80,12 +80,12 @@ namespace BootcampBistro
                 {
                     sum += price;
                 }
-
+                Console.Clear();
                 Console.WriteLine($"Subtotal: {sum:C}\nTax: {sum * .06:C}\nTotal: {sum + (sum * .06):C}");
 
                 Console.WriteLine("How would you like to pay for that: Cash, Check, or Card?");
                 string pmtReply = Console.ReadLine().ToLower();
-
+                
 
                 switch (pmtReply)
                 {
@@ -99,13 +99,14 @@ namespace BootcampBistro
                     case "cash":
                     {
                         Payment cash = new Payment((sum), "Cash");
-                        cash.CashPmt();
+                        Console.WriteLine($"Your change is {cash.CashPmt()-(sum+(sum*0.06)):C}");
                             break;
                     }
                     case "check":
                     {
                         Payment check = new Payment((sum), "Check");
-                        check.checkPmt();
+                            string checkNumb = check.checkPmt();
+                            Console.WriteLine($"You paid with check {checkNumb}.");
                             break;
                     }
                 }
@@ -123,6 +124,7 @@ namespace BootcampBistro
                 string answer2 = Console.ReadLine().ToLower();
                 if (answer2 == "y")
                 {
+                    Console.Clear();
                     orderAgain = true;
                 }
                 else

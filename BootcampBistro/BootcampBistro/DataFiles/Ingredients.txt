@@ -1,20 +1,20 @@
-rb, 97
-turkey, 96
+rb, 89
+turkey, 89
 ham, 99
 tuna, 100
 salami, 100
 patty, 100
 hot dog, 100
 cucumber, 200
-lettuce, 185
-tomoato, 185
-onion, 185
-cheese, 185
+lettuce, 170
+tomoato, 170
+onion, 170
+cheese, 170
 bacon, 100
-mayo, 185
+mayo, 170
 mustard, 200
 ketchup, 200
-white bread, 185
+white bread, 170
 wheat bread, 200
 hamburger bun, 200
 hotdog bun, 200
