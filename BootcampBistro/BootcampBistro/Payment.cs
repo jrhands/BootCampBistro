@@ -22,15 +22,15 @@ namespace BootcampBistro
         public void cardPmt()
 
         {
-            double[] cardNum = new double[11];
+            double[] cardNum = new double[15];
             Console.WriteLine("Please enter your credit card number");
             double entNum = double.Parse(Console.ReadLine());
+
+            string entNum1 = entNum.ToString();
             
-            //entNum = cardNum[12];
-            
-            
+            if ()
             {
-                Console.WriteLine("Please enter a 12 digit card number");
+                Console.WriteLine("Please enter a 16 digit card number");
                 Console.ReadLine();
             }
                 

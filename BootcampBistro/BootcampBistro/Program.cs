@@ -9,7 +9,7 @@ namespace BootcampBistro
         static void Main(string[] args)
         {
             bool orderAgain = true;
-            List<MenuItem> menu = LoadData();
+            //List<MenuItem> menu = LoadData();
             do
             {
                 Console.WriteLine("=====================================");
@@ -105,6 +105,11 @@ namespace BootcampBistro
                     Payment check = new Payment((sum), "Check");
                     check.checkPmt();
                 }
+                foreach (string item in itemList)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine($"Subtotal: {sum:C}\nTax: {sum * .06:C}\nTotal: {sum + (sum * .06):C}");
 
                 orderList.Clear();
                 itemList.Clear();
