@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 rb, 0
+=======
+rb, 97
+>>>>>>> dfe7deed978694a79f3b44601542d9ebd5782445
 turkey, 96
 ham, 99
 tuna, 100
@@ -6,6 +10,7 @@ salami, 100
 patty, 100
 hot dog, 100
 cucumber, 200
+<<<<<<< HEAD
 lettuce, 188
 tomoato, 188
 onion, 188
@@ -15,6 +20,17 @@ mayo, 188
 mustard, 200
 ketchup, 200
 white bread, 188
+=======
+lettuce, 185
+tomoato, 185
+onion, 185
+cheese, 185
+bacon, 100
+mayo, 185
+mustard, 200
+ketchup, 200
+white bread, 185
+>>>>>>> dfe7deed978694a79f3b44601542d9ebd5782445
 wheat bread, 200
 hamburger bun, 200
 hotdog bun, 200

@@ -54,13 +54,13 @@ namespace BootcampBistro
             return priceList[order - 1];
         }
     
-        string path = @"C:\Users\Owner\Desktop\ingredients.txt";
+
 
 
 
         public static bool GetInv(int order)
         {
-            string path = @"C:\Users\scull\Desktop\BootCampBistro-master\BootcampBistro\BootcampBistro\DataFiles\Ingredients.txt";
+            string path = @"C:\Users\GC Student\Source\Repos\BootCampBistro-master\BootcampBistro\BootcampBistro\DataFiles\Ingredients.txt";
             string[] allLines = File.ReadAllLines(path);
             Dictionary<string, int> hash = new Dictionary<string, int>();
 
