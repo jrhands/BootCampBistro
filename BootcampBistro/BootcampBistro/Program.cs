@@ -56,19 +56,7 @@ namespace BootcampBistro
                     } while (itemOut == true);
 
 
-                    Console.WriteLine("Do you want to add another item? (y/n)");
-                    string answer = Console.ReadLine().ToLower();
-                    switch (answer)
-                    {
-                        case "y":
-                            repeat = true;
-                            break;
-                        case "n":
-                            repeat = false;
-                            break;
-                        default:
-                            break;
-                    }
+
                 } while (repeat == true);
 
                 double sum = 0;
@@ -101,7 +89,6 @@ namespace BootcampBistro
             } while (orderAgain == true);
 
         }
-
 
     }
 }
