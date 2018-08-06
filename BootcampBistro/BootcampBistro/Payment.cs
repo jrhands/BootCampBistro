@@ -11,7 +11,6 @@ namespace BootcampBistro
     {
         public double PmtAmt;
         public string PmtType;
-        public double[] CardNum;
 
         public Payment(double pmtAmt, string pmtType)
         {
@@ -21,10 +20,11 @@ namespace BootcampBistro
         public void cardPmt()
         
         {
+
             bool isValid = true;
             do
             {
-                double[] cardNum = new double[15];
+                
                 Console.WriteLine("Please enter your credit card number");
                 long entNum = Convert.ToInt64(Console.ReadLine());
                 string entNum1 = entNum.ToString();
@@ -56,10 +56,11 @@ namespace BootcampBistro
             return cashAmt;
         }
 
-        public void checkPmt()
+        public string checkPmt()
         {
-            Console.WriteLine("Thank you for your payment by check");
-            Console.ReadLine();
+            Console.WriteLine("Please enter your check number:");
+            string checkNum = Console.ReadLine();
+            return checkNum;
         }
       
     }

@@ -1,11 +1,27 @@
+<<<<<<< HEAD
 rb, 92
 turkey, 95
 ham, 97
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+rb, 0
+=======
+rb, 97
+>>>>>>> dfe7deed978694a79f3b44601542d9ebd5782445
+turkey, 96
+=======
+rb, 89
+turkey, 89
+>>>>>>> e2d5e5b7eec4b23652803e7a1ec0f0e02cd08ed1
+ham, 99
+>>>>>>> c5c4d07fa527106766f85c8c5a74d123806da03e
 tuna, 100
 salami, 99
 patty, 96
 hot dog, 99
 cucumber, 200
+<<<<<<< HEAD
 lettuce, 175
 tomoato, 175
 onion, 174
@@ -15,6 +31,40 @@ mayo, 180
 mustard, 195
 ketchup, 195
 white bread, 179
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+lettuce, 188
+tomoato, 188
+onion, 188
+cheese, 188
+bacon, 100
+mayo, 188
+mustard, 200
+ketchup, 200
+white bread, 188
+=======
+lettuce, 185
+tomoato, 185
+onion, 185
+cheese, 185
+=======
+lettuce, 170
+tomoato, 170
+onion, 170
+cheese, 170
+>>>>>>> e2d5e5b7eec4b23652803e7a1ec0f0e02cd08ed1
+bacon, 100
+mayo, 170
+mustard, 200
+ketchup, 200
+<<<<<<< HEAD
+white bread, 185
+>>>>>>> dfe7deed978694a79f3b44601542d9ebd5782445
+=======
+white bread, 170
+>>>>>>> e2d5e5b7eec4b23652803e7a1ec0f0e02cd08ed1
+>>>>>>> c5c4d07fa527106766f85c8c5a74d123806da03e
 wheat bread, 200
 hamburger bun, 196
 hotdog bun, 199
