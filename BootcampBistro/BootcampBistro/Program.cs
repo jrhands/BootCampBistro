@@ -86,24 +86,28 @@ namespace BootcampBistro
                 Console.WriteLine("How would you like to pay for that: Cash, Check, or Card?");
                 string pmtReply = Console.ReadLine().ToLower();
 
-                Payment card = new Payment((sum), "Visa");
-                card.cardPmt();
-                card.checkPmt();
 
-                if (pmtReply == "Card")
-                    /* {
-                         Payment card = new Payment((sum), "Visa");
-                         Console.ReadLine();
-                     }*/
-                    if (pmtReply == "Cash")
+                switch (pmtReply)
+                {
+                    case "card":
+                    {
+                        Payment card = new Payment((sum), "Visa");
+                        card.cardPmt();
+                        card.checkPmt();
+                            break;
+                    }
+                    case "cash":
                     {
                         Payment cash = new Payment((sum), "Cash");
                         cash.CashPmt();
+                            break;
                     }
-                if (pmtReply == "Check")
-                {
-                    Payment check = new Payment((sum), "Check");
-                    check.checkPmt();
+                    case "check":
+                    {
+                        Payment check = new Payment((sum), "Check");
+                        check.checkPmt();
+                            break;
+                    }
                 }
                 foreach (string item in itemList)
                 {
