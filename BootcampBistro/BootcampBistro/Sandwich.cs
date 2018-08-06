@@ -60,8 +60,8 @@ namespace BootcampBistro
 
         public static bool GetInv(int order)
         {
-            string path = @"C:\Users\GC Student\Source\Repos\BootCampBistro-master\BootcampBistro\BootcampBistro\DataFiles\Ingredients.txt";
-            string[] allLines = File.ReadAllLines(path);
+            string path = @"C:\Users\djgar\Desktop\MsALBlair\GCLabs\BootCampBistro\BootcampBistro\BootcampBistro\DataFiles\Ingredients.txt";
+            string[] allLines = File.ReadAllLines(path); 
             Dictionary<string, int> hash = new Dictionary<string, int>();
 
             foreach (string line in allLines)
@@ -160,7 +160,7 @@ namespace BootcampBistro
 
         private static bool GetHotdog(string path, Dictionary<string, int> hash)
         {
-            if (hash["hotdog bun"] == 0 || hash["hotdog"] == 0 || hash["mustard"] == 0 || hash["ketchup"] == 0 || hash["onion"] == 0)
+            if (hash["hotdog bun"] == 0 || hash["hot dog"] == 0 || hash["mustard"] == 0 || hash["ketchup"] == 0 || hash["onion"] == 0)
             {
                 return false;
 
@@ -168,7 +168,7 @@ namespace BootcampBistro
             else
             {
                 --hash["hotdog bun"];
-                --hash["hotdog"];
+                --hash["hot dog"];
                 --hash["onion"];
                 --hash["mustard"];
                 --hash["ketchup"];

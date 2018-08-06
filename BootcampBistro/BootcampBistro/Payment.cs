@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace BootcampBistro
 {
@@ -16,44 +17,34 @@ namespace BootcampBistro
         {
             PmtAmt = pmtAmt;
             PmtType = pmtType;
-            
-           
         }
         public void cardPmt()
-
+        
         {
-            double[] cardNum = new double[15];
-            Console.WriteLine("Please enter your credit card number");
-            double entNum = double.Parse(Console.ReadLine());
-
-            string entNum1 = entNum.ToString();
-            
-            if ()
+            bool isValid = true;
+            do
             {
-                Console.WriteLine("Please enter a 16 digit card number");
-                Console.ReadLine();
-            }
+                double[] cardNum = new double[15];
+                Console.WriteLine("Please enter your credit card number");
+                long entNum = Convert.ToInt64(Console.ReadLine());
+                string entNum1 = entNum.ToString();
+
+                if (entNum1.Length !=16)
+                {
+                    Console.WriteLine("Please enter a valid 16 digit card number");
+                    isValid = true;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter your expiration date mm/yy");
+                    string expDate = Console.ReadLine();
+                    Console.WriteLine("Please enter your CVV code");
+                    int code = int.Parse(Console.ReadLine());
+                    isValid = false;
+                }
                 
-            Console.WriteLine("Please enter your expiration date mm/yy");
-            string expDate = Console.ReadLine();
+            } while (isValid);
 
-            Console.WriteLine("Please enter your CVV code");
-            int code = int.Parse(Console.ReadLine());
-
-            if (cardNum[0] == 4)
-            {
-                Console.WriteLine("Thank you for your Visa payment. Please come again");
-            }
-
-            if (cardNum[0] == 5)
-            {
-                Console.WriteLine("Thank you for your Mastercard payment. Please come again");
-            }
-
-            if (cardNum[0] == 6)
-            {
-                Console.WriteLine("Thank you for your Discover payment. Please come again");
-            }
 
         }
         public double CashPmt()
