@@ -36,7 +36,7 @@ namespace BootcampBistro
                 do
                 {
                     Console.WriteLine("What item would you like to order? (#)");
-                    int order = int.Parse(Console.ReadLine());
+                     int order = int.Parse(Console.ReadLine());
 
                     switch (order)
                     {
