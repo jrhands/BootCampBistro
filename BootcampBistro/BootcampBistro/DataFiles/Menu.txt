@@ -1,0 +1,9 @@
+Roast Beef Sandwich, 12.99
+Turkey, 12.99
+Ham, 10.99
+Club, 12.99
+Tuna,12.99
+Veggie, 10.99
+Italian, 11.99
+Burger, 13.99
+Hot Dog, 7.99
