@@ -93,7 +93,6 @@ namespace BootcampBistro
                     {
                         Payment card = new Payment((sum), "Visa");
                         card.cardPmt();
-                        card.checkPmt();
                             break;
                     }
                     case "cash":
