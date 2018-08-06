@@ -1,4 +1,4 @@
-roast beeef, 100
+rb, 96
 turkey, 100
 ham, 100
 tuna, 100
@@ -6,18 +6,17 @@ salami, 100
 patty, 100
 hot dog, 100
 cucumber, 200
-lettuce, 200
-tomoato,200
-onion, 200
-cheese, 200
+lettuce, 196
+tomoato, 196
+onion, 196
+cheese, 196
 bacon, 100
-mayo, 200
+mayo, 196
 mustard, 200
 ketchup, 200
-white bread, 200
+white bread, 196
 wheat bread, 200
 hamburger bun, 200
 hotdog bun, 200
 reg chips, 200
 bbq chips, 200
-
